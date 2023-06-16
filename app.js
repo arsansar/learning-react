@@ -1,3 +1,6 @@
+import React from 'react';
+import  ReactDOM  from 'react-dom/client';
+
 /*
 
 <div class="parent">
@@ -15,18 +18,17 @@
 
 */
 
+//react element is a object
+//react elememt is equal to dom element
 
-const parent = React.createElement('div', {id:'parent'}, 
-    React.createElement('div', {id:'child1'}, [
-        React.createElement('h1', {id:'h1'}, 'i am the h1 tag'),
-        React.createElement('h1', {id:'h1'}, 'i am the h1 tag')
-    ]),
-    React.createElement('div', {id:'child1'}, [
-        React.createElement('h1', {id:'h1'}, 'i am the h1 tag'),
-        React.createElement('h1', {id:'h1'}, 'i am the h1 tag')
-    ])
-);
+// const heading = React.createElement("H1", {id:"heading"}, "namaste react 🍎");
 
-const root = ReactDOM.createRoot(document.getElementById('parent'));
+//jsx is not a react, jsx has similar syntax like html 
 
-root.render(parent);
+//JSX => babel transpile it to React.createElement => ReactElement-JS => HTML Element
+const jsxheading = <h1 id='heading'>namaste react 🍎</h1>;
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+//render will replace everything in that dom not append
+root.render(jsxheading);
