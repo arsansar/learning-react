@@ -1,22 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import  ReactDOM  from 'react-dom/client';
 
-/*
-
-<div class="parent">
-    <div class="child1">
-        <h1>i am the h1 tag</h1>
-        <h2>i am the h2 tag</h2>
-    </div>
-
-     <div class="child2">
-        <h1>i am the h1 tag</h1>
-        <h2>i am the h2 tag</h2>
-    </div>
-
-</div>
-
-*/
 
 //react element is a object
 //react elememt is equal to dom element
@@ -32,3 +16,18 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 //render will replace everything in that dom not append
 root.render(jsxheading);
+
+//React component
+// 1. class based component -- OLD
+// 2. functional based component -- NEW
+
+//what is react functional Component?
+//normal javascript function
+
+const headingComponent = () =>{
+    return <h1>This is heading component</h1>
+}
+
+//const headingComponent1 = () => <h1>This is heading component</h1>; // true
+
+//const headingComponent2 = () => { return <h1> This is heading component</h1>}; // true
